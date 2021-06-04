@@ -10,9 +10,9 @@ Structure Html
 
     1 | + Code entièrement commenté (avec des commentaires utiles :
         indications, usages...) 
-        + indentation 
+        + indentation | fait
     2 | Structures HTML et CSS respectueuses des standards | fait 
-    3 | Optimisation complète du code 
+    3 | Optimisation complète du code | fait ~
     4 | Le site devra être en Anglais | fait 
 
 Structure Css
@@ -29,7 +29,7 @@ Structure Css
     2 | blog | fait 
     3 | admin | fait
     4 | login | fait
-    5 | Création d’un mode sombre
+    5 | Création d’un mode sombre 
     6 | + Avec un système de colonnes en place, les passer l'une en
         dessous des autres sur mobile, avec un changement d'ordre si
         cela vous semble pertinent.
