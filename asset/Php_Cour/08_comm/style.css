@@ -1,0 +1,109 @@
+
+.commentaire-form {
+    max-width: 700px;
+    margin-right: 50px;
+}
+
+.contact-info,
+.commentaire-form {
+    flex: 1;
+}
+
+.commentaire-form h2 {
+    color: #a30707;
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.commentaire-form .text-box {
+    background: white;
+    color: #a30707;
+    border: 3px solid #a30707;
+    width: calc(50% - 10px);
+    height: 50px;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.commentaire-form .text-box:first-child {
+    margin-right: 15px;
+}  
+.commentaire-form textarea {
+    background: white;
+    color: #a30707;
+    border: 3px solid #a30707;
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    min-height: 200px;
+    max-height: 400px;
+    resize: vertical;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.commentaire-form .send-btn {
+    float: right;
+    background: white;
+    color: #a30707;
+    border: 3px solid #a30707;
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-property: background;
+}
+
+.commentaire-form .send-btn:hover {
+    background: #a30707;
+    color: #fff;
+}
+
+@media screen and (max-width: 950px) {
+    .contact-section {
+        flex-direction: column;
+    }
+
+    .contact-info,
+    .commentaire-form {
+        margin: 30px 50px;
+    }
+
+    .commentaire-form h2 {
+        font-size: 30px;
+    }
+
+    .commentaire-form .text-box {
+        width: 100%;
+    }
+} 
+
+
+div p{
+    display: flex;
+    background: white;
+    color: #a30707;
+    border: 3px solid #a30707;
+    width: calc(50% - 10px);
+    height: 50px;
+    margin: 20px;
+    padding: 3px;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+    align-items: center;
+}

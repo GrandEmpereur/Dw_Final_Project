@@ -1,0 +1,107 @@
+Structure Html 
+
+    Principeaux 
+
+    1 | Dossier correctement rangé et fichiers correctement nommés | fait 
+    2 | Structure HTML respectueuse des standards | fait 
+    3 | Optimisation de morceaux de code par le PHP | fait 
+
+    Secondaire 
+
+    1 | + Code entièrement commenté (avec des commentaires utiles :
+        indications, usages...) 
+        + indentation 
+    2 | Structures HTML et CSS respectueuses des standards | fait 
+    3 | Optimisation complète du code 
+    4 | Le site devra être en Anglais | fait 
+
+Structure Css
+
+    principale 
+
+    1 | Mise en forme des éléments grâce au flexbox | fait 
+    2 | Site internet responsive | fait 
+    3 | Usage des transitions CSS à plusieurs endroits distincts | fait 
+    4 | Création d'un menu burger | fait 
+
+    Secondaire 
+    1 | Utilisation permanente des variables CSS | fait 
+    2 | blog | fait 
+    3 | admin | fait
+    4 | login | fait
+    5 | Création d’un mode sombre
+    6 | + Avec un système de colonnes en place, les passer l'une en
+        dessous des autres sur mobile, avec un changement d'ordre si
+        cela vous semble pertinent.
+        A l'endroit de votre choix, faire en sorte que des éléments
+        apparaissent seulement sur mobile ou seulement sur ordinateur
+        (une justification de la pertinence de votre choix sera attendue)
+
+    7 | + mise en forme en colonnes de vos pages grâce aux flexbox | fait
+
+Structure Js :  
+
+    Principeaux
+
+    1 | Sur le formulaire de contact, à l'envoi, vérifier par le
+        Javascript/Jquery le respect du remplissage. Il faudra retourner
+        une erreur sur le site si il y a un soucis (indiquer les champs qui
+        sont incorrect)
+
+    2 | Création d'une galerie d'images avec un système de lightbox | fait 
+
+    3 | Créer une ou plusieurs interaction(s), qui permet d'afficher ou
+        masquer du contenu sur le site (Ex : accordéon, toggle). Le
+        contenu à afficher proviendra d'un site extérieur (twitch, youtube,
+        twitter etc...) via des iframes. Une animation fluide est exigée.
+
+    Secondaire 
+    1 | + Vérifier les erreurs en temps réel et retourner une erreur
+        personnalisée grâce au JS et CSS (Exemple : Le nom de famille ne
+        dois pas contenir de chiffres)
+
+    2 | + Ajouter un système de filtres par thème ou catégorie pour voir
+        que les images correspondantes 
+        + Créer un effet masonry.
+
+    3 | Réaliser un effet parallax à l’endroit du site que vous souhaitez | fait 
+    
+    4 | Réaliser une animation d'apparition des éléments sur la page une
+        fois que la page est chargée
+
+Structure php
+
+    Principeaux 
+    1 | Création d'un système de commentaires sous la galerie d'image, avec classement des commentaires
+par date et possibilité de les supprimer librement | fait 
+    
+    Secondaire 
+    
+    1 | + Le système de commentaires doit être sécurisé (pas de hack, pas d'insultes) | fait 
+        + Seul un administrateur connecté au site aura accès à un bouton "Supprimer" à côté de chaque commentaire
+        pour retirer des commentaires indésirables | fait 
+    
+    2 |  Création d'une interface d'administration accessible seulement grâce à un système de login + mot de passe
+        personnalisé pour chaque utilisateur. | fait 
+        L'interface contiendra :
+        - une ou plusieurs pages pour ajouter, modifier et supprimer des articles de blog ; | fait
+        - une page qui liste les demandes de contacts ; | fait
+        - une page ou plusieurs pages qui permettent d'ajouter, modifier et supprimer des utilisateurs. | fait 
+        Il y aura deux rôles possible pour les utilisateurs : Admin et Editeur. 
+        L'éditeur ne pourra rien supprimer, et n'aura
+        pas accès à la page de gestion des utilisateurs. | fait 
+        L'admin peut modifier le rôle des utilisateurs depuis l'interface | fait 
+
+    3 | Création d'un blog, l'ajout des articles devra comprendre un titre, une image à la une et une zone de contenu
+        wysiwyg. Cette partie est à intégrer dans la partie interface d’administration.
+        Du côté des pages blogs du site : une page listera tous les articles avec une image à la une | fait
+        + extrait (début de l'article). Un clic sur un bouton ou un lien donne accès à l'article en entier sur une autre page. | fait
+
+
+        organisation : 
+
+        5 min intro personnel + motivation 
+        5 min presentation du site 
+        5 min test technique
+        5 min de marge en cas de probleme  
+
