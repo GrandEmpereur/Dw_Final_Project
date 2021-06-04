@@ -88,45 +88,45 @@
     
 <!-- ########################### Img ########################### -->
     <div class="gallery">
-      <div class="image" data-name="all"><span><img src="img/Arc/All.png" alt="All Saga"></span></div> 
-      <div class="image" data-name="Arc 1"><span><img src="img/Arc/Saga surpy village.jpg" alt="Arc 1"></span></div> 
-      <div class="image" data-name="Arc 1"><span><img src="img/Arc/Arc1.png" alt="Arc 1"></span></div> 
-      <div class="image" data-name="Arc 1"><span><img src="img/Arc/Arc1.1.png" alt="Arc 1"></span></div> 
-      <div class="image" data-name="Arc 1"><span><img src="img/Arc/Arc1.2.jpg" alt="Arc 1"></span></div> 
-      <div class="image" data-name="Arc 1"><span><img src="img/Arc/Arc1.3.png" alt="Arc 1"></span></div> 
-      <div class="image" data-name="Arc 1"><span><img src="img/Arc/Arc1.4.jpg" alt="Arc 1"></span></div>
-      <div class="image" data-name="Arc 1"><span><img src="img/Arc/Arc1.5.png" alt="Arc 1"></span></div>
+      <div class="image" data-name="all"><span><img src="img/Arc/All.png" alt="All Saga-alt"></span></div> 
+      <div class="image" data-name="Arc 1"><span><img src="img/Arc/Saga surpy village.jpg" alt="Arc 1-alt"></span></div> 
+      <div class="image" data-name="Arc 1"><span><img src="img/Arc/Arc1.png" alt="Arc 1-alt"></span></div> 
+      <div class="image" data-name="Arc 1"><span><img src="img/Arc/Arc1.1.png" alt="Arc 1-alt"></span></div> 
+      <div class="image" data-name="Arc 1"><span><img src="img/Arc/Arc1.2.jpg" alt="Arc 1-alt"></span></div> 
+      <div class="image" data-name="Arc 1"><span><img src="img/Arc/Arc1.3.png" alt="Arc 1-alt"></span></div> 
+      <div class="image" data-name="Arc 1"><span><img src="img/Arc/Arc1.4.jpg" alt="Arc 1-alt"></span></div>
+      <div class="image" data-name="Arc 1"><span><img src="img/Arc/Arc1.5.png" alt="Arc 1-alt"></span></div>
 
       <!--  -->
-      <div class="image" data-name="Arc 2"><span><img src="img/Arc/Saga Baratie.png" alt="Arc 2"></span></div>
-      <div class="image" data-name="Arc 2"><span><img src="./img/Arc/Arc_2_.png" alt="Arc 2"></span></div> 
-      <div class="image" data-name="Arc 2"><span><img src="./img/Arc/Arc_2_1.png" alt="Arc 2"></span></div> 
-      <div class="image" data-name="Arc 2"><span><img src="./img/Arc/Arc_2_2.png" alt="Arc 2"></span></div> 
-      <div class="image" data-name="Arc 2"><span><img src="./img/Arc/Arc_2_3.png" alt="Arc 2"></span></div> 
-      <div class="image" data-name="Arc 2"><span><img src="./img/Arc/Arc_2_4.png" alt="Arc 2"></span></div>
+      <div class="image" data-name="Arc 2"><span><img src="img/Arc/Saga Baratie.png" alt="Arc 2-alt"></span></div>
+      <div class="image" data-name="Arc 2"><span><img src="./img/Arc/Arc_2_.png" alt="Arc 2-alt"></span></div> 
+      <div class="image" data-name="Arc 2"><span><img src="./img/Arc/Arc_2_1.png" alt="Arc 2-alt"></span></div> 
+      <div class="image" data-name="Arc 2"><span><img src="./img/Arc/Arc_2_2.png" alt="Arc 2-alt"></span></div> 
+      <div class="image" data-name="Arc 2"><span><img src="./img/Arc/Arc_2_3.png" alt="Arc 2-alt"></span></div> 
+      <div class="image" data-name="Arc 2"><span><img src="./img/Arc/Arc_2_4.png" alt="Arc 2-alt"></span></div>
 
       <!--  -->
-      <div class="image" data-name="Arc 11"><span><img src="img/Arc/Saga Guerre au Sommet.jpg" alt="Arc 11"></span></div>
-      <div class="image" data-name="Arc 11"><span><img src="./img/Arc/Arc_11_.png" alt="Arc11"></span></div> 
-      <div class="image" data-name="Arc 11"><span><img src="./img/Arc/Arc_11_1.png" alt="Arc 11"></span></div> 
-      <div class="image" data-name="Arc 11"><span><img src="./img/Arc/Arc_11_2.png" alt="Arc 11"></span></div> 
-      <div class="image" data-name="Arc 11"><span><img src="./img/Arc/Arc_11_3.png" alt="Arc 11"></span></div> 
-      <div class="image" data-name="Arc 11"><span><img src="./img/Arc/Arc_11_4.png" alt="Arc 11"></span></div>
+      <div class="image" data-name="Arc 11"><span><img src="img/Arc/Saga Guerre au Sommet.jpg" alt="Arc 11-alt"></span></div>
+      <div class="image" data-name="Arc 11"><span><img src="./img/Arc/Arc_11_.png" alt="Arc 11-alt"></span></div> 
+      <div class="image" data-name="Arc 11"><span><img src="./img/Arc/Arc_11_1.png" alt="Arc 11-alt"></span></div> 
+      <div class="image" data-name="Arc 11"><span><img src="./img/Arc/Arc_11_2.png" alt="Arc 11-alt"></span></div> 
+      <div class="image" data-name="Arc 11"><span><img src="./img/Arc/Arc_11_3.png" alt="Arc 11-alt"></span></div> 
+      <div class="image" data-name="Arc 11"><span><img src="./img/Arc/Arc_11_4.png" alt="Arc 11-alt"></span></div>
       <!--  -->
-      <div class="image" data-name="Arc 16"><span><img src="img/Arc/Saga bigMom.jpg" alt="Arc 16"></span></div>
-      <div class="image" data-name="Arc 16"><span><img src="./img/Arc/Arc_16_.png" alt="Arc 16"></span></div> 
-      <div class="image" data-name="Arc 16"><span><img src="./img/Arc/Arc_16_1.png" alt="Arc 16"></span></div> 
-      <div class="image" data-name="Arc 16"><span><img src="./img/Arc/Arc_16_2.png" alt="Arc 16"></span></div> 
-      <div class="image" data-name="Arc 16"><span><img src="./img/Arc/Arc_16_3.png" alt="Arc 16"></span></div> 
-      <div class="image" data-name="Arc 16"><span><img src="./img/Arc/Arc_16_4.png" alt="Arc 16"></span></div>
+      <div class="image" data-name="Arc 16"><span><img src="img/Arc/Saga bigMom.jpg" alt="Arc 16-alt"></span></div>
+      <div class="image" data-name="Arc 16"><span><img src="./img/Arc/Arc_16_.png" alt="Arc 16-alt"></span></div> 
+      <div class="image" data-name="Arc 16"><span><img src="./img/Arc/Arc_16_1.png" alt="Arc 16-alt"></span></div> 
+      <div class="image" data-name="Arc 16"><span><img src="./img/Arc/Arc_16_2.png" alt="Arc 16-alt"></span></div> 
+      <div class="image" data-name="Arc 16"><span><img src="./img/Arc/Arc_16_3.png" alt="Arc 16-alt"></span></div> 
+      <div class="image" data-name="Arc 16"><span><img src="./img/Arc/Arc_16_4.png" alt="Arc 16-alt"></span></div>
 
       
-      <div class="image" data-name="all"><span><img src="./img/Arc/Saga Wano.jpg" alt="Arc 18"></span></div>
-      <div class="image" data-name="Arc 18"><span><img src="./img/Arc/Arc_18_.png" alt="Arc 18"></span></div> 
-      <div class="image" data-name="Arc 18"><span><img src="./img/Arc/Arc_18_1.png" alt="Arc 18"></span></div> 
-      <div class="image" data-name="Arc 18"><span><img src="./img/Arc/Arc_18_2.png" alt="Arc 18"></span></div> 
-      <div class="image" data-name="Arc 18"><span><img src="./img/Arc/Arc_18_3.png" alt="Arc 18"></span></div> 
-      <div class="image" data-name="Arc 18"><span><img src="./img/Arc/Arc_18_4.png" alt="Arc 18"></span></div>
+      <div class="image" data-name="all"><span><img src="./img/Arc/Saga Wano.jpg" alt="Arc 18-alt"></span></div>
+      <div class="image" data-name="Arc 18"><span><img src="./img/Arc/Arc_18_.png" alt="Arc 18-alt"></span></div> 
+      <div class="image" data-name="Arc 18"><span><img src="./img/Arc/Arc_18_1.png" alt="Arc 18-alt"></span></div> 
+      <div class="image" data-name="Arc 18"><span><img src="./img/Arc/Arc_18_2.png" alt="Arc 18-alt"></span></div> 
+      <div class="image" data-name="Arc 18"><span><img src="./img/Arc/Arc_18_3.png" alt="Arc 18-alt"></span></div> 
+      <div class="image" data-name="Arc 18"><span><img src="./img/Arc/Arc_18_4.png" alt="Arc 18-alt"></span></div>
 
   </div>
 
