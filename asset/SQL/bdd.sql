@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : ven. 04 juin 2021 à 11:13
+-- Généré le : ven. 04 juin 2021 à 19:53
 -- Version du serveur :  10.4.18-MariaDB
 -- Version de PHP : 8.0.3
 
@@ -43,7 +43,7 @@ CREATE TABLE `blog` (
 --
 
 INSERT INTO `blog` (`id_article`, `id_auteur`, `titre`, `image`, `description`, `date`) VALUES
-(8, 18, 'WireFrame ', 'img/upload/tm_site_part2_6.8_packdev_Header-dev.jpg', 'Apprendre a bien organiser c\'est wireframe corectement ', '2021-06-03 21:43:00'),
+(8, 18, 'jqspe   moiuzhsefoi', 'img/upload/img1.jpg', 'test  o_qszerhà_g', '2021-06-04 15:53:00'),
 (9, 18, 'Premier cour de HTML CSS Responcive avec Alexis  ', 'img/upload/webdigit-univers-dev.jpg', 'Venez decouvire le monde incroyable du deve avec Alexis', '2021-06-03 21:45:00');
 
 -- --------------------------------------------------------
@@ -76,8 +76,7 @@ INSERT INTO `commentaires` (`Id`, `Pseudo`, `Message`, `Date`) VALUES
 (26, 'HELLO', '&lt;p&gt;foZBOUBOSZ&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 0, 0);&quot;&gt;JSBDVBQIUSBVUQOSDBOV&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 0, 0);&quot;&gt;BEBD&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 0, 0);&quot;&gt;BDFB&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 0, 0);&quot;&gt;DFBDW&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 0, 0);&quot;&gt;BWDGB&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 0, 0);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center; &quot;&gt;&lt;span style=&quot;background-color: rgb(255, 0, 0);&quot;&gt;KSVJBDVK&amp;lt; SUDBVKSDBVKWSXCV&lt;/span&gt;&lt;/p&gt;', '2021-06-03 13:46:00'),
 (28, 'tbsrtbst', '&lt;p&gt;sbtrbstrbsrgb&lt;/p&gt;', '2021-06-03 13:47:00'),
 (29, 'hello ', '&lt;p&gt;hello&lt;/p&gt;', '2021-06-03 13:47:00'),
-(32, 'gdsrfgdgfv', '<p>i<span style=\\\"background-color: rgb(255, 255, 0);\\\">ubvusibdubvuisbdfivj&lt;s</span></p>', '2021-06-03 16:09:00'),
-(33, 'sbetbsetdb', '<p><br></p><table class=\\\"table table-bordered\\\"><tbody><tr><td>qvrfvqdfs</td><td>vqzsdv</td><td><br></td></tr><tr><td><br></td><td><br></td><td>vvqsrfvqsf</td></tr></tbody></table><p><br></p>', '2021-06-03 16:11:00');
+(32, 'gdsrfgdgfv', '<p>i<span style=\\\"background-color: rgb(255, 255, 0);\\\">ubvusibdubvuisbdfivj&lt;s</span></p>', '2021-06-03 16:09:00');
 
 -- --------------------------------------------------------
 
@@ -173,7 +172,7 @@ ALTER TABLE `blog`
 -- AUTO_INCREMENT pour la table `commentaires`
 --
 ALTER TABLE `commentaires`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT pour la table `contacte`
