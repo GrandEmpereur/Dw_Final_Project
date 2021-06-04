@@ -19,10 +19,10 @@
 
 <!-- ########################### Add User ########################### -->
 
-        <div class="sales-boxes">
-            <div class="recent-sales box">
+        <div class="Admin-boxes">
+            <div class="recent-Admin box">
             <div class="title">User Add Form</div>
-                <div class="sales-details-User">
+                <div class="Admin-details-User">
                     <form method="POST">
                         <input type="text" name="name" class="user-form" placeholder="Name..." required>
                         <input type="email" name="email" class="user-form" placeholder="Email..." required>
@@ -34,7 +34,7 @@
 <!-- ########################### Modif User ########################### -->
 
                     <div class="title">Modif User</div>
-                        <div class="sales-details-tableau">
+                        <div class="Admin-details-tableau">
                             <?php include('./php/db_Admin.php'); ?>
                         </div> 
                 </div>

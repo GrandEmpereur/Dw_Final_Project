@@ -18,10 +18,10 @@
 
 <!-- ########################### Contact ########################### -->
 
-        <div class="sales-boxes">
-            <div class="recent-sales box">
+        <div class="Admin-boxes">
+            <div class="recent-Admin box">
             <div class="title">All Contact Request</div>
-                <div class="sales-details-User">
+                <div class="Admin-details-User">
                     <?php include('./php/db_Contact.php'); ?>
                 </div>
             </div>

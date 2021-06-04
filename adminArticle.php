@@ -18,10 +18,10 @@
 
 <!-- ########################### Add Article ########################### -->
 
-        <div class="sales-boxes">
-            <div class="recent-sales box">
+        <div class="Admin-boxes">
+            <div class="recent-Admin box">
             <div class="title">Add Article</div>
-                <div class="sales-details-User">
+                <div class="Admin-details-User">
                     <form method="POST" enctype="multipart/form-data">
                         <input  type="text" name="titre" class="user-form" placeholder="Title : " required>
                         <input type="file" name="img" class="image-inpute" accept=".jpg, .jpeg, .png" >
@@ -32,7 +32,7 @@
 <!-- ########################### Include ########################### -->
 
                     <div class="title">All Article</div>
-                        <div class="sales-details-tableau">
+                        <div class="Admin-details-tableau">
                             <?php include('./php/db_Article.php'); ?>
                         </div> 
                 </div>
