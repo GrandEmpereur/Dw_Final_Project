@@ -198,7 +198,7 @@
       <?php
         include('./php/commentaire.php')
       ?>
-      <script src="./js/gallery.js"></script>
+      <script src="./js/script.js"></script>
       <?php 
       include('./php/footer.php');
     ?>

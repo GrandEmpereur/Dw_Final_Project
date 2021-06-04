@@ -105,3 +105,6 @@ par date et possibilité de les supprimer librement | fait
         5 min test technique
         5 min de marge en cas de probleme  
 
+git add . 
+git commit -m "modif/add de fichier"
+git push
