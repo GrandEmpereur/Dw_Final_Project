@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <?php 
       include('./php/link.php');
     ?>
@@ -7,7 +8,8 @@
     <?php 
       include('./php/header.php');
     ?>
-<!-- History -->
+
+<!-- ########################### Main ########################### -->
 
 <section class="section about" id="about">
   <div class="title">
@@ -33,6 +35,8 @@
     </div>
   </div>
 </section>
+
+<!-- ########################### Content ########################### -->
 
   <section class="section about" id="about">
     <div class="title">
@@ -232,11 +236,12 @@
     </div>
   </section>
   
+<!-- ########################### Footer ########################### -->
     <?php 
       include('./php/footer.php');
     ?>
       
-    <!-- Custom Script -->
+<!-- ########################### Script ########################### -->
     <script src="./js/script.js"></script>
   </body>
 </html>

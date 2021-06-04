@@ -1,6 +1,9 @@
 <?php 
+// ############################## DB Link ############################
+
     include('./php/connexion.php');
-    
+
+// ############################## SQL REQuest  ############################
     $request = $bdd->prepare("SELECT * FROM usertable");
     $request->execute();
     $User_list = $request->fetchAll(PDO::FETCH_ASSOC);
@@ -16,6 +19,7 @@
 
 ?>
 
+<!-- // ############################## HTML Main ############################ -->
 
 <div class="home-content">
         <div class="overview-boxes">

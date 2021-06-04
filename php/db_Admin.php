@@ -1,10 +1,17 @@
-
 <?php
+// ############################## DB Link ############################
+
         include('./php/connexion.php');
-        
+
+// ############################## Main ############################
         if ($_POST){
 
+// ############################## Modif BTN ############################
+
             if(isset($_POST['modifUser'])) {
+
+// ############################## All Data ############################
+
                 $data = [
                     'name' => $_POST['name'],
                     'email' => $_POST['email'],
@@ -12,8 +19,12 @@
                     'status' => $_POST['status']
                 ];
 
+// ############################## Sql Request ############################
+
                 $UserUpdate = $bdd->prepare("UPDATE usertable set name = :name, email = :email, status = :status WHERE id = :id");
                 $UserUpdate->execute($data);
+
+// ############################## Delet BTN ############################
 
             }elseif(isset($_POST['deletUser'])) {
 
@@ -22,7 +33,12 @@
                 $UserDelet->execute();
             }
 
+// ############################## Send BTN ############################
+
             else{
+
+// ############################## Security ############################
+
                     // gestion de la secu sql
                 $_POST['name'] = addslashes($_POST['name']);
                 // gestion de la secu html
@@ -35,10 +51,14 @@
             
         }
 
+// ############################## SQL Request ############################
+
         $request = $bdd->prepare("SELECT * FROM usertable");
         $request->execute();
         $User_list = $request->fetchAll(PDO::FETCH_ASSOC);
         ?>
+        
+<!-- ############################## HTML Main ############################ -->
         
         <table class="tableau">
             <thead>

@@ -1,20 +1,36 @@
 <?php
+// ############################## DB Link ############################
+
         include('./php/connexion.php');
         
+// ############################## Main ############################
         if ($_POST){
+
+// ############################## Delet BTN ############################
+
             if(isset($_POST['delete'])){
                 $id = $_POST['delete'];
                 $bdd->exec("DELETE FROM commentaires WHERE Id = '$id' ");
+
+// ############################## Send BTN ############################
+
             }else{
                 
-                // je gére les ' pour pas tout casser 
+// ############################## All Data ############################
+
                 $date = new DateTime('now');
                 $dataCommente = [
                     'name' => addslashes(htmlspecialchars($_POST['name'])) ,
                     'message' => addslashes($_POST['message']),
                     "date" => $date->format('Y-m-d H:i')
                 ];
+
+// ############################## Include ############################
+
                 include('./php/InsulteManager.php');
+
+// ############################## SQL Request ############################
+
                 $SendComment = $bdd->prepare("INSERT INTO commentaires (Pseudo, Message, Date) VALUE ( :name, :message, :date)");
                 $SendComment->execute($dataCommente);
 
@@ -27,6 +43,8 @@
         $request->execute();
         $comment_list = $request->fetchAll(PDO::FETCH_ASSOC);
         ?>
+
+<!-- ############################## Commentaire Form ############################ -->
 
         <?php 
             foreach($comment_list as $comment) {

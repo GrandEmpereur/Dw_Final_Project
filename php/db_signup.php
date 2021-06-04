@@ -1,11 +1,16 @@
 <?php
 
+// ############################## Bdd link ############################
+
 include_once('connexion.php');
+
 // ############################## Register ############################
 
 if ($_POST){
     if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['pdw']) && isset($_POST['cpdw'])){
 
+
+// ############################## data ############################
         $Alldata = [
 
             "name" => htmlspecialchars($_POST['name']),
@@ -14,7 +19,9 @@ if ($_POST){
             "cpdw" => htmlspecialchars($_POST['cpdw']),
             'status' => 'visitor'
         ];
-            // L'utilisateur est inscrit dans la BDD
+
+// ############################## Signup Verif ############################
+
             $verif = $bdd->prepare('SELECT name, email, password FROM usertable WHERE email = ?');
             $verif->execute(array($Alldata["email"]));
             $row = $verif->rowCount();
@@ -32,6 +39,9 @@ if ($_POST){
                                 $Alldata["pdw"] = password_hash($_POST['pdw'], PASSWORD_DEFAULT);
                                 $senddata = $bdd->prepare("INSERT INTO usertable (name, email, password, Cpassword, status ) VALUES ( :name, :email, :pdw, :cpdw, :status)");
                                 $senddata->execute($Alldata);
+
+// ############################## Herder Location ############################
+
                                 header('Location: ../index.php');
                             }else{ header('Location: login.php?reg_err=password');}
                         }else{ header('Location: login.php?reg_err=mail');}

@@ -3,12 +3,21 @@
     <?php session_start() ?>
     <?php include('./php/link.php'); ?>
     <body>
+
+<!-- ########################### Main ########################### -->
+
     <div class="sidebar">
         <div class="logo-details">
         </div>
-        <?php include('./php/adminNav.php'); ?>
 
-        <?php include('./php/Analytique.php'); ?>
+<!-- ########################### Include ########################### -->
+
+        <?php 
+            include('./php/adminNav.php');
+            include('./php/Analytique.php'); 
+        ?>
+
+<!-- ########################### Add User ########################### -->
 
         <div class="sales-boxes">
             <div class="recent-sales box">
@@ -22,6 +31,8 @@
                         <input type="submit" name="submit" class="send-btn-add" value="Send">
                     </form>
 
+<!-- ########################### Modif User ########################### -->
+
                     <div class="title">Modif User</div>
                         <div class="sales-details-tableau">
                             <?php include('./php/db_Admin.php'); ?>
@@ -31,7 +42,8 @@
         </div>
     </section>
 
-    
+<!-- ########################### Script ########################### -->
+
     <script src="./js/admin.js"></script>
 </body>
 </html>

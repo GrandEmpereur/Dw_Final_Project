@@ -1,6 +1,9 @@
-<!-- Header -->
+<!-- ########################### Header ########################### -->
+
 <header id="home" class="header">
-    <!-- Navigation -->
+
+<!-- ########################### Nav Bar ########################### -->
+
     <nav class="nav">
         <div class="navigation container">
         <div class="logo">
@@ -53,12 +56,16 @@
             </ul>
         </div>
 
+<!-- ########################### Burger Icon ########################### -->
+
         <div class="hamburger">
             <i class="fas fa-bars"></i>
         </div>
         </div>
     </nav>
-    <!-- Hero -->
+
+<!-- ########################### Hero ########################### -->
+
     <div class="hero">
         <h3>Hello, my name is</h3>
         <h1>Monkey D. Luffy</h1>
@@ -66,6 +73,8 @@
     </div>
 
     <img class="banner" src="./img/Luffy.jpg" alt="" />
+
+<!-- ########################### Social Icon ########################### -->
 
     <div class="icons">
         <span><i class="fab fa-facebook-f"></i></span>

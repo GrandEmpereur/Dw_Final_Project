@@ -1,12 +1,17 @@
 <?php
+// ############################## DB Link ############################
+
     include('./php/connexion.php');
+
+// ############################## Select From ############################
     
     $request = $bdd->prepare("SELECT * FROM blog INNER JOIN usertable ON blog.id_auteur = usertable.id ORDER BY date DESC");
     $request->execute();
     $Blog_list = $request->fetchAll(PDO::FETCH_ASSOC);
     ?>
     
-    
+<!-- ############################## Html Article ############################ -->
+
     <section class="blog">
         <?php 
             foreach($Blog_list as $Blogs) {

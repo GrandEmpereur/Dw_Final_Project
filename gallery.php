@@ -10,9 +10,12 @@
     <title>Project Website | Gallery</title>
 
   <body>
-<!-- Header -->
+<!-- ########################### Main ########################### -->
+
 <header id="home" class="header_galery">
-    <!-- Navigation -->
+
+<!-- ########################### Vav ########################### -->
+
     <nav class="nav">
         <div class="navigation container">
         <div class="logo">
@@ -69,7 +72,9 @@
     </div>
   </nav>
   <div class="wrapper-gallery">
-    <!-- filter Items -->
+
+<!-- ########################### Fillter ########################### -->
+    
     <nav>
       <div class="items">
         <span class="item active" data-name="all">All</span>
@@ -94,7 +99,7 @@
       </div>
     </nav>
     
-    <!-- filter Images -->
+<!-- ########################### Img ########################### -->
     <div class="gallery">
       <div class="image" data-name="all"><span><img src="img/Arc/All.png" alt=""></span></div> 
       <div class="image" data-name="Arc 1"><span><img src="img/Arc/Saga surpy village.jpg" alt=""></span></div> 
@@ -168,7 +173,9 @@
       <div class="image" data-name="Arc 10"><span><img src="" alt=""></span></div>  -->
     </div>
   </div>
-  <!-- fullscreen img preview box -->
+
+<!-- ########################### lightbox ########################### -->
+  
   <div class="preview-box">
     <div class="details">
       <span class="title">Image Category: <p></p></span>
@@ -178,7 +185,7 @@
   </div>
   <div class="shadow"></div>
 
-  <script src="/js/gallery.js"></script>
+<!-- ########################### Commentaire ########################### -->
 
   <section class="section contact" id="contact">
         <div class="commentaire-form">
@@ -198,10 +205,16 @@
       <?php
         include('./php/commentaire.php')
       ?>
-      <script src="./js/script.js"></script>
+      
+<!-- ########################### footer ########################### -->
+
       <?php 
-      include('./php/footer.php');
-    ?>
+        include('./php/footer.php');
+      ?>
+<!-- ########################### Script ########################### -->
+
+      <script src="./js/script.js"></script>
+
 </body>
 </html>
 

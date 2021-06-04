@@ -7,7 +7,7 @@
     <?php 
       include('./php/header.php');
     ?>
-    <!-- Main -->
+<!-- ########################### Main ########################### -->
     <section class="section about" id="about">
       <div class="title">
         <h1>About me</h1>
@@ -29,8 +29,9 @@
         </div>
       </div>
     </section>
-  
-      <!-- Time line  -->
+
+<!-- ########################### Timeline ########################### -->
+
       <section class="section-timeline" id="time-line"> 
         <div class="timeline-container" id="timeline-1">
           <div class="timeline-header">
@@ -349,12 +350,15 @@
               </div>
           </div>
         </div>
-
       </section>
+
+<!-- ########################### Footer ########################### -->
+
     <?php 
       include('./php/footer.php');
     ?>
-    <!-- Custom Script -->
+
+<!-- ########################### Scripte ########################### -->
     <script src="./js/script.js"></script>
     <script src="./js/timeline.js "></script>
   </body>

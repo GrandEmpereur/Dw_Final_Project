@@ -5,6 +5,8 @@
         include('./php/link.php');
     ?>
     <body>
+<!-- ########################### Main ########################### -->
+
     <div class="wrapper-container">
         <div class="wrapper-login">
             <div class="title-text">
@@ -24,6 +26,8 @@
                 <div class="slider-tab"></div>
                 </div>
                 <div class="form-inner">
+
+<!-- ########################### Footer Login ########################### -->
 
                 <form method="post" action="./php/db_login.php" class="login" >
                     <div class="field">
@@ -45,6 +49,7 @@
                 </form>
                 <?php include('./php/db_login.php'); ?>
                 
+<!-- ########################### Form Signup ########################### -->
 
                 <form method="post" action="./php/db_signup.php" metho class="signup">
                     <div class="field">
@@ -69,25 +74,15 @@
             <?php include('./php/db_signup.php'); ?>
         </div>
     </div>
-    
-        <script>
-            const loginText = document.querySelector(".title-text .login");
-            const loginForm = document.querySelector("form.login");
-            const loginBtn = document.querySelector("label.login");
-            const signupBtn = document.querySelector("label.signup");
-            const signupLink = document.querySelector("form .signup-link a");
-            signupBtn.onclick = (()=>{
-            loginForm.style.marginLeft = "-50%";
-            loginText.style.marginLeft = "-50%";
-            });
-            loginBtn.onclick = (()=>{
-            loginForm.style.marginLeft = "0%";
-            loginText.style.marginLeft = "0%";
-            });
-            signupLink.onclick = (()=>{
-            signupBtn.click();
-            return false;
-            });
-        </script>
+
+<!-- ########################### Footer ########################### -->
+
+    <?php 
+        include('./php/footer.php');
+    ?>
+
+<!-- ########################### Script ########################### -->
+
+    <script src="./js/script.js"></script>
     </body>
 </html>

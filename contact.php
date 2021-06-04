@@ -8,7 +8,9 @@
     <?php 
       include('./php/header.php');
     ?>
-    <!-- Contact -->
+
+<!-- ########################### Main ########################### -->
+
     <section class="section contact" id="contact">
         <div class="title">
           <h1>Contact me</h1>
@@ -56,13 +58,15 @@
     </section>
 
 
-  
+<!-- ########################### footer ########################### -->
     <?php 
       include('./php/footer.php');
     ?>
 
-    <!-- Custom Script -->
+<!-- ########################### Script ########################### -->
+
     <script src="./js/script.js"></script>
+    
   </body>
 </html>
 

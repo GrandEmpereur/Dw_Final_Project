@@ -1,6 +1,13 @@
 <?php
+// ############################## DB Link ############################
+
     include('./php/connexion.php');
+
+// ############################## Main ############################
+
     if ($_POST){
+
+// ############################## Modif BTN ############################
 
         if(isset($_POST['modifPost'])) {
             
@@ -8,6 +15,8 @@
             $imgUpdateTmp = $_FILES['imgUpdate']['tmp_name'];
             $imgUpdateLink = 'img/upload/' . $imgUpdateName; 
             move_uploaded_file($imgUpdateTmp, $imgUpdateLink);
+
+// ############################## All Data ############################
 
             $date = new DateTime('now');
             $dataBlog = [
@@ -18,8 +27,12 @@
                 "date" => $date->format('Y-m-d H:i')
             ];
 
+// ############################## SQL Request ############################
+
             $BlogUpdate = $bdd->prepare("UPDATE blog set titre = :titre, image = :image, description = :description, date = :date WHERE id_article = :id");
             $BlogUpdate->execute($dataBlog);
+
+// ############################## Delet BTN ############################
 
         }elseif(isset($_POST['deletPost'])) {
 
@@ -27,9 +40,13 @@
             $BlogDelet = $bdd->prepare("DELETE FROM blog WHERE 	id_article = '$id' ");
             $BlogDelet->execute();
         }
-    
+
+// ############################## Send BTN ############################
+
         else{
-            
+
+// ############################## All Data ############################
+
             $imgName = $_FILES['img']['name'];
             $imgTmp = $_FILES['img']['tmp_name'];
             $imgLink = 'img/upload/' . $imgName; 
@@ -43,27 +60,39 @@
                 'image' => $imgLink,
                 "date" => $date->format('Y-m-d H:i')
             ];
-            
+
+// ############################## Sql Request ############################
             $blogArticle = $bdd->prepare("INSERT INTO blog (id_auteur, titre, image, description, date ) VALUES (:id_auteur, :titre, :image, :description, :date ) ");
             $blogArticle->execute($dataBlogs);
         }
-        
+
+// ############################## Note ############################
+
         // recup nom 
         // session id 
         // id auteur db 
         // : id => $_SESSION[id]
         // selecte * frome blog  Inner join  usertable on blog.id-auteur = usertable.id 
-        
+        // $_FILES pour la gestion d'image en php
+        // $name = $_FILES['filename']['name'] => img
+        // tmp = $_FILES['filename]['tmp-name'] toujours second parametre tmp_name 
+        // fb-link = ' img/upload/' . $name;  chemein 
+        // $move_upload_file($tmp, $db-link);
+        // INSERT INTO blog (img) values ('db-link);  
+
     }
 
 
 
+// ############################## SQL Request ############################
 
     $request = $bdd->prepare("SELECT * FROM blog");
     $request->execute();
     $Blog_list = $request->fetchAll(PDO::FETCH_ASSOC);
     ?>
     
+<!-- ############################## HTML Content ############################ -->
+
     <table class="tableau">
             <thead>
                 <tr class="tableau_title" >
@@ -104,12 +133,3 @@
             </tbody>
         </table>
 
-
-<!-- 
-// $_FILES pour la gestion d'image en php
-// $name = $_FILES['filename']['name'] => img
-// tmp = $_FILES['filename]['tmp-name'] toujours second parametre tmp_name 
-// fb-link = ' img/upload/' . $name;  chemein 
-// $move_upload_file($tmp, $db-link);
-// INSERT INTO blog (img) values ('db-link);  
--->

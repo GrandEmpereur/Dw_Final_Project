@@ -1,3 +1,4 @@
+<!-- ############################## Admin Nav ############################ -->
 
         <ul class="nav-links">
             <li>
@@ -13,6 +14,8 @@
             </a>
             </li>
 
+<!-- ############################## Permission Manager ############################ -->
+
             <?php
             if($_SESSION['status'] === 'admin'){?>
                 <li>
@@ -24,6 +27,9 @@
             <?php
             }
             ?>
+            
+<!-- ############################## HTML Nav ############################ -->
+
             <li>
             <a href="./adminContact.php">
                 <i class='bx bx-envelope-open'></i>
@@ -55,6 +61,9 @@
         </div>
         <div class="profile-details">
             <img src="./img/luffy_enfant.jpg" alt="">
+
+<!-- ############################## Admin Nav ############################ -->
+
             <?php if (isset($_SESSION['status']) && $_SESSION['status'] == 'admin'){?>
                 <span class="admin_name">Admin</span>
             <?php

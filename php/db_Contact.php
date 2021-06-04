@@ -1,9 +1,14 @@
-
 <?php
+
+// ############################## DB Link ############################
+
         include('./php/connexion.php');
         
+// ############################## Main ############################
+
         if ($_POST){
 
+// ############################## DeletBtn ############################
 
             if(isset($_POST['deletContacte'])) {
 
@@ -13,11 +18,15 @@
             }           
         }
 
+// ############################## Select From ############################
+
         $request = $bdd->prepare("SELECT * FROM contacte");
         $request->execute();
         $Contacte_list = $request->fetchAll(PDO::FETCH_ASSOC);
         ?>
         
+<!-- ############################## Html Table Contact ############################ -->
+
         <table class="tableau">
             <thead>
                 <tr class="tableau_title" >
