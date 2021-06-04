@@ -12,7 +12,7 @@
     $request->execute();
     $Blog_list = $request->fetchAll(PDO::FETCH_ASSOC);
 
-    $request = $bdd->prepare("SELECT * FROM contact");
+    $request = $bdd->prepare("SELECT * FROM contacte");
     $request->execute();
     $Contact_list = $request->fetchAll(PDO::FETCH_ASSOC);
 
@@ -48,7 +48,7 @@
             <div class="box">
             <div class="right-side">
                 <div class="box-topic">Total Contact</div>
-                <div class="number">3</div>
+                <div class="number"><?= count($Contact_list) ?></div>
                 <div class="indicator">
                 <i class='bx bx-up-arrow-alt'></i>
                 <span class="text">Up from yesterday</span>
