@@ -19,15 +19,15 @@
 // ############################## All Data ############################
 
                 $date = new DateTime('now');
+                $police = file('./asset/insulte.txt');
+                $trie = array_map('trim', $police);
+                $trie2 = array_map("strtolower", $trie);
                 $dataCommente = [
-                    'name' => addslashes(htmlspecialchars($_POST['name'])) ,
-                    'message' => addslashes($_POST['message']),
+                    'name' => addslashes(htmlspecialchars(str_replace($trie, '**', $_POST['name']))) ,
+                    'message' => addslashes(str_replace($trie, '**', $_POST['message'])),
                     "date" => $date->format('Y-m-d H:i')
+                    
                 ];
-
-// ############################## Include ############################
-
-                include('./php/InsulteManager.php');
 
 // ############################## SQL Request ############################
 

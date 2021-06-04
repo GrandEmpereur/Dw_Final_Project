@@ -1899,3 +1899,738 @@ Zouave
 Zoulou
 Zozo
 Zéro
+Grand Empereur |
+#0164
+
+Grand Empereur | — 14/02/2021
+je suis abbatue j'ai pas le droit au gif ;-;
+Vespuci — 14/02/2021
+
+Grand Empereur | — 08/04/2021
+v1v1
+Vespuci — 08/04/2021
+papa
+Grand Empereur | — 08/04/2021
+je conte organiser un voyage au portugal pour les grande vacance ^^
+Vespuci — 08/04/2021
+cho
+Vespuci — 15/04/2021
+moyen de move?
+Grand Empereur | — 15/04/2021
+oui
+Vespuci — 15/04/2021
+<3<3
+Grand Empereur | — 23/05/2021
+https://discord.gg/7pUfTQqb
+Grand Empereur | — 01/06/2021
+vien impacte
+Vespuci — 01/06/2021
+tt
+```php
+    <article>
+        <div class="Title_login">
+            <h2>&darr; Login &darr;</h2>
+        </div>
+        <form name="commentaire" method="post">
+            <table class="form-style">
+Afficher plus
+message.txt
+3 Ko
+login
+<div class="burger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+</div>
+<ul>
+    <li class="close"><a href="index.php">Accueil</a></li>
+    <li class="close"><a href="Histoire.php">Histoire</a></li>
+    <li class="close"><a href="Galerie.php">Galerie</a></li>
+    <li class="close"><a href="Blog.php">Blog</a></li>
+    <li class="close"><a href="Contact.php">Contact</a></li>
+    <?php
+        if(isset($_SESSION['user'])) {
+            echo "<li class='close'><a href='logout.php'>logout</a></li>";
+        }else {
+            echo "<li class='close'><a href='Login.php'>login</a></li>";
+        }
+    ?>
+    <?php
+        if(isset($_SESSION['role'])) { 
+            if($_SESSION['role'] == 1) { 
+            ?>
+            <li class="close"><a href="Interface.php">Interface</a></li>
+        <?php
+            }
+        }
+    ?>
+</ul>
+navbar
+<?php
+    session_start();
+    unset($_SESSION["Pseudo"]);
+    unset($_SESSION["password"]);
+    session_destroy();
+    echo 'You have cleaned session';
+    header('Refresh: 2; URL = Login.php');
+?>
+logout
+<article>
+        <div class="Title_login">
+            <h2>&darr; Inscription &darr;</h2>
+        </div>
+        <?php
+        $role = 0;
+        $pdo = new PDO('mysql:host=localhost;dbname=commentaires', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+            if ($_POST){
+                $_POST['Pseudo'] = addslashes($_POST['Pseudo']);
+                $_POST['password'] = addslashes($_POST['password']);
+                $pdo -> exec("INSERT INTO Account (Pseudo, password, role) VALUES ('$_POST[Pseudo]', '$_POST[password]', $role)");
+                header("Refresh:0");
+                header('Location:../Michel-Vincent-groupe02/Login.php');
+            }
+        ?>
+        <form name="commentaire" method="post">
+            <table class="form-style">
+                <tr>
+                    <input <?php echo 'required' ?> type="Pseudo" name="Pseudo" class="feedback-input" placeholder="Pseudo"/>
+                </tr>
+                <tr>
+                    <input <?php echo 'required' ?> type="password" name="password" class="feedback-input" placeholder="Mot de passe"></input>
+                </tr>
+                <button id="button_com" type="submit" value="Envoyer">S'inscrire</button>
+                <p class="lien_Inscription"><a href="login.php">Vous avez un compte? Connectez vous!</a></p>
+            </table>
+        </form>
+    </article>
+inscription
+Grand Empereur | — 02/06/2021
+t
+<?php 
+    include('./php/connexion.php');
+        if (isset($_POST['name']) && isset($_POST['pwd']))   {
+            $name = htmlspecialchars($_POST['name']);
+            $password = htmlspecialchars($_POST['pdw']);
+            $password = password_hash($_POST['pdw'], PASSWORD_DEFAULT);
+
+            //$_POST['Pseudo'] = addslashes($_POST['Pseudo']);
+            //$_POST['password'] = addslashes($_POST['password']);
+
+            $check = $bdd->prepare('SELECT name, password, status FROM usertable WHERE name = ?');
+            $check->execute(array($email));
+            $data = $check->fetch();
+            $row = $check->rowCount();
+            if($row == 1)   {
+                if(filter_var($email)) {
+                    if($data['password'] === $password) {
+                        $_SESSION['user'] = $data['name'];
+                        $_SESSION['role'] = $data['role'];
+                        if($data['role'] == 1) {
+                            header('Location:../Dw_project/admin.php');
+                        }else header('Location:../Dw_project/index.php');
+                    }else header('Location:../Dw_project/index.php?login_err=password');
+                }else header('Location:../Dw_project/index.php?login_err=email');
+            }else header('Location:../Dw_project/index.php?login_err=email-pdw');
+        }
+?>
+<form action="#" method="post" class="login">
+                    <div class="field">
+                        <input type="text" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="field">
+                        <input type="password" name="pdw" placeholder="Password" required>
+                    </div>
+                    <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" value="Login">
+                    </div>
+                    <div class="signup-link">
+                        Not a member? <a href="">Signup now</a>
+                    </div>
+                </form>
+                <?php include('./php/db_login.php'); ?>
+Grand Empereur | — 02/06/2021
+t
+ if ($_POST){
+
+            if(isset($_POST['modifUser'])) {
+                $data = [
+                    'name' => $_POST['name'],
+                    'email' => $_POST['email'],
+                    'id' => $_POST['id'],
+                    'status' => $_POST['status']
+                ];
+
+                $UserUpdate = $bdd->prepare("UPDATE usertable set name = :name, email = :email, status = :status WHERE id = :id");
+                $UserUpdate->execute($data);
+
+            }elseif(isset($_POST['deletUser'])) {
+
+                $id = $_POST['id'];
+                $UserDelet = $bdd->prepare("DELETE FROM usertable WHERE id = '$id' ");
+                $UserDelet->execute();
+            }
+
+            else{
+                    // gestion de la secu sql
+                $_POST['name'] = addslashes($_POST['name']);
+                // gestion de la secu html
+                $_POST['name'] = htmlspecialchars($_POST['name']);
+                // gestion hash pwd
+                $_POST['pwd'] = password_hash($_POST['pwd'], PASSWORD_DEFAULT);
+                // insertion Sql
+                $bdd->exec("INSERT INTO usertable (name, email, password, status) VALUES ('$_POST[name]', '$_POST[email]', '$_POST[pwd]', 'visitor')");
+            }
+            
+        }
+Vespuci — Hier à 23:35
+
+Grand Empereur | — Aujourd’hui à 11:18
+https://summernote.org/plugins
+Summernote - Super Simple WYSIWYG editor
+Summernote - Super Simple WYSIWYG editor
+Super Simple WYSIWYG Editor on Bootstrap Summernote is a JavaScript library that helps you create WYSIWYG editors online.
+
+suit la doc
+Vespuci — Aujourd’hui à 11:19
+<3<3
+Grand Empereur | — Aujourd’hui à 16:53
+t
+// $_FILES pour la gestion d'image en php
+        // $name = $_FILES['filename']['name'] => img
+        // tmp = $_FILES['filename]['tmp-name'] toujours second parametre tmp_name 
+        // fb-link = ' img/upload/' . $name;  chemein 
+        // $move_upload_file($tmp, $db-link);
+        // INSERT INTO blog (img) values ('db-link);
+Vespuci — Aujourd’hui à 19:12
+$_POST['comment'] = str_replace($fichierbis2, '**', $_POST['comment']);
+$fichier = file('ressources/insultes.txt');
+        $fichierbis = array_map('trim', $fichier);
+        $fichierbis2 = array_map("strtolower", $fichierbis);
+abruti
+chier
+niquer
+enculer
+endauffer
+foutre
+faire mettre
+andouille
+anglo-fou
+appareilleuse
+assimilé
+assimilée
+astèque
+avorton
+bachi-bouzouk
+baleine
+bande d’abrutis
+baraki
+bâtard
+baudet
+beauf
+bellicole
+bête
+biatch
+bicot
+bicotte
+bique
+bite
+bitembois
+Bitembois
+blauwe
+bordille
+boucaque
+boudin
+bouffi
+bouffon
+bouffonne
+bougnoul
+bougnoule
+Bougnoulie
+bougnoulisation
+bougnouliser
+bougre
+boukak
+boulet
+bounioul
+bounioule
+bourdille
+bourrer
+bourricot
+branleur
+bridé
+bridée
+brigand
+brise-burnes
+bulot
+cacou
+cafre
+cageot
+caldoche
+carcavel
+casse-bonbon
+casse-couille
+casse-couilles
+cave
+chagasse
+chaoui
+charlot de vogue
+charogne
+chauffard
+chbeb
+sale chein
+chiennasse
+chienne
+chier
+chieur
+chinetoc
+chinetoque
+Chinetoque
+chintok
+chleuh
+chnoque
+citrouille
+coche
+colon
+complotiste
+con
+conasse
+conchier
+connard
+connarde
+connasse
+conspirationniste
+couille molle
+counifle
+courtaud
+CPF
+crétin
+crevure
+cricri
+... (318 lignes restantes)
+Réduire
+insultes.txt
+5 Ko
+﻿
+abruti
+chier
+niquer
+enculer
+endauffer
+foutre
+faire mettre
+andouille
+anglo-fou
+appareilleuse
+assimilé
+assimilée
+astèque
+avorton
+bachi-bouzouk
+baleine
+bande d’abrutis
+baraki
+bâtard
+baudet
+beauf
+bellicole
+bête
+biatch
+bicot
+bicotte
+bique
+bite
+bitembois
+Bitembois
+blauwe
+bordille
+boucaque
+boudin
+bouffi
+bouffon
+bouffonne
+bougnoul
+bougnoule
+Bougnoulie
+bougnoulisation
+bougnouliser
+bougre
+boukak
+boulet
+bounioul
+bounioule
+bourdille
+bourrer
+bourricot
+branleur
+bridé
+bridée
+brigand
+brise-burnes
+bulot
+cacou
+cafre
+cageot
+caldoche
+carcavel
+casse-bonbon
+casse-couille
+casse-couilles
+cave
+chagasse
+chaoui
+charlot de vogue
+charogne
+chauffard
+chbeb
+sale chein
+chiennasse
+chienne
+chier
+chieur
+chinetoc
+chinetoque
+Chinetoque
+chintok
+chleuh
+chnoque
+citrouille
+coche
+colon
+complotiste
+con
+conasse
+conchier
+connard
+connarde
+connasse
+conspirationniste
+couille molle
+counifle
+courtaud
+CPF
+crétin
+crevure
+cricri
+crotté
+crouillat
+crouille
+croûton
+dago
+débile
+débougnouliser
+doryphore
+doxosophe
+doxosophie
+drouille
+du schnoc
+ducon
+duconnot
+dugenoux
+dugland
+duschnock
+emmanché
+emmerder
+emmerdeur
+emmerdeuse
+empafé
+empaffé
+empapaouté
+enculé
+enculé de ta race
+enculer
+garce
+putain
+pute
+salaud
+enflure
+enfoiré
+envaselineur
+envoyer faire foutre
+espingoin
+espingouin
+étron
+face de chien
+face de craie
+face de pet
+face de rat
+fachiste
+FDP
+fell
+fermer sa gueule
+fils de bâtard
+fils de chien
+fils de chienne
+fils de garce
+fils de pute
+fils de ta race
+fiotte
+folle
+fouteur
+foutriquet
+fripouille
+frisé
+fritz
+Fritz
+fumelard
+fumier
+garage à bite
+garage à bites
+garce
+gaupe
+GDM
+gestapette
+Gestapette
+gland
+glandeur
+glandeuse
+glandouillou
+glandu
+glandue
+gnoul
+gnoule
+Godon
+gogol
+gogolito
+goï
+gook
+gouer
+gouilland
+gouine
+goulou-goulou
+gourdasse
+gourde
+gourgandine
+grognasse
+gueniche
+guide de merde
+guindoule
+gwer
+habitant
+halouf
+imbécile
+incapable
+islamo-gauchisme
+islamo-gauchiste
+islamogauchiste
+jean-foutre
+jean-fesse
+journalope
+juivaillon
+kahlouche
+karlouche
+kawish
+Kraut
+la fermer
+lâche
+lâcheux
+lavette
+loche
+lopette
+lorpidon
+macaroni
+magot
+makoumé
+mal blanchi
+mange-merde
+mangeux de marde
+marchandot
+margouilliste
+marsouin
+mauviette
+maya
+melon
+mercon
+merdaille
+merdaillon
+merde
+merdeux
+merdouillard
+michto
+minable
+minus
+misérable
+moinaille
+moins-que-rien
+mollusque
+monacaille
+mongol
+mongol à batteries
+moricaud
+mort aux vaches
+morue
+moule à gaufres
+moule à merde
+naze
+nazi
+négraille
+nègre
+négresse
+négrillon
+négrillonne
+négro
+newfie
+nez de bœuf
+niac
+niafou
+niaiseux
+niakoué
+nique sa mère
+nique ta mère
+niquer
+niquer sa mère
+niquer sa reum
+niquez votre mère
+nodocéphale
+nœud
+noob
+nord-phocéen
+NTM
+nul
+nulle
+orchidoclaste
+ordure
+ortho
+pakos
+panoufle
+patarin
+PD
+peau
+peau de couille
+peau de fesse
+peau de vache
+pecque
+pédale
+pédé
+pédoque
+pelle à merde
+péquenaud
+personnage de comédie
+petite bite
+petite merde
+pignouf
+pignoufe
+pisser à la raie
+pissou
+pithécanthrope
+pleutre
+plouc
+pochard
+poissonnière
+pompe à vélo
+porc
+porcas
+porcasse
+pot de merde
+pouf
+pouffiasse
+poufiasse
+pourriture
+punaise
+putain
+putain de ta race
+pute
+pute borgne
+putois
+raclure
+raclure de bidet
+radoteur
+raton
+résidu de capote
+résidu de fausse couche
+retourne aux asperges
+ripopée
+robespierrot
+roi des cons
+roi nègre
+rosbif
+roulure
+sac à foutre
+sac à merde
+sac à papier
+sagouin
+sagouine
+salaud
+sale
+salop
+salope
+sans-couilles
+satrouille
+sauvage
+schbeb
+schlague
+schleu
+Schleu
+Schleue
+schnock
+schnoque
+sent-la-pisse
+sidi
+social-traître
+sorcière
+sottiseux
+sous-merde
+stéarique
+ta bouche
+ta gueule
+ta mère la pute
+ta race
+ta yeule
+tache
+tafiole
+tantouserie
+tantouze
+tapette
+tapettitude
+tarlouze
+tata
+tchoutche
+tebé
+tête carrée
+tête de boche
+tête de cochon
+tête de con
+tête de gland
+tête de linotte
+tête de mort
+tête de mule
+tête de nœud
+tête de veau
+téteux
+teubé
+Thénardier
+thon
+tocard
+traînée
+travail d’Arabe
+nègre
+triple buse
+trou de cul
+trou du cul
+trouduc
+truiasse
+truie
+va te faire foutre
+va te faire une soupe d’esques
+vaurien
+vaurienne
+vendu
+vert-de-gris
+vide-couilles
+viédase
+vier
+vieux
+vieux blanc
+vipère lubrique
+youd
+youp
+youpin
+youpine
+youpinisation
+youpiniser
+youtre
+zguègue
+pd
+niker
+niker vos mere
+salope
