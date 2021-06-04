@@ -10,6 +10,7 @@
 // ############################## Modif BTN ############################
 
         if(isset($_POST['modifPost'])) {
+            if($_FILES['imgUpdate']['name'] != ''){
             
             $imgUpdateName = $_FILES['imgUpdate']['name'];
             $imgUpdateTmp = $_FILES['imgUpdate']['tmp_name'];
@@ -31,6 +32,22 @@
 
             $BlogUpdate = $bdd->prepare("UPDATE blog set titre = :titre, image = :image, description = :description, date = :date WHERE id_article = :id");
             $BlogUpdate->execute($dataBlog);
+        
+        }else{
+
+            $date = new DateTime('now');
+            $dataBlog = [
+                'titre' => $_POST['titre'],
+                'description' => $_POST['description'],
+                'id' => $_POST['id'],
+                "date" => $date->format('Y-m-d H:i')
+            ];
+
+// ############################## SQL Request ############################
+
+            $BlogUpdate = $bdd->prepare("UPDATE blog set titre = :titre, description = :description, date = :date WHERE id_article = :id");
+            $BlogUpdate->execute($dataBlog);
+        }
 
 // ############################## Delet BTN ############################
 
@@ -62,6 +79,7 @@
             ];
 
 // ############################## Sql Request ############################
+
             $blogArticle = $bdd->prepare("INSERT INTO blog (id_auteur, titre, image, description, date ) VALUES (:id_auteur, :titre, :image, :description, :date ) ");
             $blogArticle->execute($dataBlogs);
         }
@@ -72,7 +90,8 @@
         // session id 
         // id auteur db 
         // : id => $_SESSION[id]
-        // selecte * frome blog  Inner join  usertable on blog.id-auteur = usertable.id 
+        // selecte * frome blog  Inner join  usertable on blog.id-auteur = usertable.id
+         
         // $_FILES pour la gestion d'image en php
         // $name = $_FILES['filename']['name'] => img
         // tmp = $_FILES['filename]['tmp-name'] toujours second parametre tmp_name 
@@ -93,7 +112,7 @@
     
 <!-- ############################## HTML Content ############################ -->
 
-    <table class="tableau">
+    <table class="tableau-blog">
             <thead>
                 <tr class="tableau_title" >
                     <th>Titre</th>
@@ -110,11 +129,11 @@
                     
                     <td>
                         <input type="hidden" name="id" value="<?= $Blogs["id_article"]?> ">
-                        <input type="text" name="titre" value="<?= $Blogs["titre"]?> ">
+                        <input type="text" name="titre" classe="form-inpute-" value="<?= $Blogs["titre"]?> ">
                     </td>
                     <td>
                         <img src="<?= $Blogs['image'];?>" alt="img-db">
-                        <input type="file" name="imgUpdate" class="user-form" accept=".jpg, .jpeg, .png" multiple >
+                        <input type="file" name="imgUpdate" class="image-inpute" accept=".jpg, .jpeg, .png">
                     </td>
                     <td>
                         <input type="text" name="description" value="<?= $Blogs["description"]?> ">

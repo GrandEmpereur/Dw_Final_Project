@@ -24,7 +24,7 @@
                 <div class="sales-details-User">
                     <form method="POST" enctype="multipart/form-data">
                         <input  type="text" name="titre" class="user-form" placeholder="Title : " required>
-                        <input type="file" name="img" class="user-form" accept=".jpg, .jpeg, .png" multiple >
+                        <input type="file" name="img" class="image-inpute" accept=".jpg, .jpeg, .png" >
                         <textarea id="summernote" name="description"></textarea>
                         <input type="submit" name="submit" class="send-btn-add" value="Send">
                     </form>

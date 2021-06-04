@@ -112,8 +112,6 @@ function preview(element){
   }
 }
 
-
-
 // ########################### WYSIWIG pl ###########################
 
 $(document).ready(function() {
