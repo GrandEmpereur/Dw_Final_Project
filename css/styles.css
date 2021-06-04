@@ -1814,6 +1814,7 @@ nav .profile-details i{
 
 .image-inpute:active {
   outline: 0;
+  
 }
 .image-inpute:active::before {
   background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
