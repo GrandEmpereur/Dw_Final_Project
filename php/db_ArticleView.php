@@ -26,14 +26,12 @@
                 </div>
 
                 <div class="card-description">
-                    <a href="#">
-                        <h3><?= $Blogs["titre"]?></h3>
-                    </a>
+                    <h3><?= $Blogs["titre"]?></h3>
                     <div class="card-meta">
                         Posted by <?= $Blogs["name"]?> on <?= $Blogs["date"]?>
                     </div>
                     <p><?= $Blogs["description"]?></p>
-                        <a href="#" class="btn-readmore">Read more</a>
+                        <a href="./blogPost.php?id=<?= $Blogs['id_article'] ?>" class="btn-readmore">Read more</a>
                 </div>
             </div>
         
