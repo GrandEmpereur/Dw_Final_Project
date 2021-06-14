@@ -5,9 +5,10 @@
 
 // ############################## Select From ############################
     $id = $_GET['id'];
-    $request = $bdd->prepare("SELECT * FROM blog INNER JOIN usertable ON blog.id_auteur = usertable.id WHERE id_article = $id ");
+    $request = $bdd->prepare("SELECT * FROM blog INNER JOIN usertable ON blog.id_auteur = usertable.id WHERE id_article = $id  ");
     $request->execute();
     $BlogPost_list = $request->fetchAll(PDO::FETCH_ASSOC);
+    
 
     ?>
 
@@ -17,6 +18,7 @@
     <section id="blogpost">
         <?php 
             foreach($BlogPost_list as $BlogPost) {
+                $url = "/Dw_Project/blogPost.php/".$BlogPost["url"]."-".$BlogPost["id_article"]
         ?>
             <div class="card">
                 <div class="card-meta-blogpost">

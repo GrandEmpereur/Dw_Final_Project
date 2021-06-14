@@ -66,7 +66,7 @@
 
             $imgName = $_FILES['img']['name'];
             $imgTmp = $_FILES['img']['tmp_name'];
-            $imgLink = 'img/upload/' . $imgName; 
+            $imgLink = '/Dw_Project/img/upload/' . $imgName; 
             move_uploaded_file($imgTmp, $imgLink);
 
             $date = new DateTime('now');

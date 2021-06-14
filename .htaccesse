@@ -1,0 +1,9 @@
+# Activation du module de réécriture d'URL :
+RewriteEngine on
+
+#--------------------------------------------------
+# Règles de réécriture d'URL :
+#--------------------------------------------------
+
+# Article sans numéro de page :
+RewriteRule Dw_Project/blogPost/([0-9]+)   Dw_Project/blogPost.php?id=$1

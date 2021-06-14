@@ -77,7 +77,7 @@
         <h4>And this is my history <span id="type1"></span></h4>
     </div>
 
-    <img class="banner" src="./img/Luffy.jpg" alt="" />
+    <img class="banner" src="/Dw_Project/img/Luffy.jpg" alt="" />
 
 <!-- ########################### Social Icon ########################### -->
 

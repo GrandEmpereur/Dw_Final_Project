@@ -120,9 +120,10 @@ li {
   position: absolute;
   right: 5%;
   bottom: 0;
-  width: 60rem;
+  width: 50rem;
   z-index: -1;
 }
+
 
 /* ############################## Media Query Header ############################# */
 
@@ -132,13 +133,13 @@ li {
   }
 
   .header img {
-    width: 50rem;
+    width: 40rem;
   }
 }
 
 @media screen and (max-width: 768px) {
   .header img {
-    width: 40rem;
+    width: 30rem;
   }
 }
 
@@ -148,7 +149,7 @@ li {
   }
 
   .header img {
-    width: 35rem;
+    width: 25rem;
   }
 }
 
