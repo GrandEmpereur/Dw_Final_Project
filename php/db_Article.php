@@ -91,7 +91,7 @@
         // id auteur db 
         // : id => $_SESSION[id]
         // selecte * frome blog  Inner join  usertable on blog.id-auteur = usertable.id
-         
+        
         // $_FILES pour la gestion d'image en php
         // $name = $_FILES['filename']['name'] => img
         // tmp = $_FILES['filename]['tmp-name'] toujours second parametre tmp_name 

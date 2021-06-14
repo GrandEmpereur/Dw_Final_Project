@@ -51,7 +51,7 @@
                     <td><input type="text" name="message" value="<?= $Contactes["message"]?> "></td>
                     <td><input type="text" name="message" value="<?= $Contactes["date"]?> "></td>
 
-                    <td><input type="submit" name='deletUser' class="send-btn" value='Delete'></td>
+                    <td><input type="submit" name='deletContacte' class="send-btn" value='Delete'></td>
                 </form>
             </tr>
         <?php 

@@ -39,10 +39,15 @@
                     <?php 
                         session_start();
 
-                    if(isset($_SESSION['status'])){ ?>
+                    if(isset($_SESSION['status']) && ($_SESSION['status'] == 'admin'|| $_SESSION['status'] == 'editor')){ ?>
 
                         <a href="./php/db_logout.php" class="nav-link scroll-link">Logout</a>
                         <a href="./admin.php" class="nav-link scroll-link">PanelAdmin</a>
+                    <?php
+                    }elseif(isset($_SESSION['status'])){?>
+
+                        <a href="./php/db_logout.php" class="nav-link scroll-link">Logout</a>
+
                     <?php
                     }else{ ?>
 

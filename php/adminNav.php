@@ -1,3 +1,15 @@
+<?php
+// ############################## DB Link ############################
+
+    include('./php/connexion.php');
+
+// ############################## Select From ############################
+    $request = $bdd->prepare("SELECT * FROM usertable ");
+    $request->execute();
+    $Admin_list = $request->fetchAll(PDO::FETCH_ASSOC);
+
+    ?>
+
 <!-- ############################## Admin Nav ############################ -->
 
         <ul class="nav-links">
@@ -64,13 +76,10 @@
 
 <!-- ############################## Admin Nav ############################ -->
 
-            <?php if (isset($_SESSION['status']) && $_SESSION['status'] == 'admin'){?>
-                <span class="admin_name">Admin</span>
+            <?php if (isset($_SESSION['status']) && ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'editor')){?>
+                <span class="admin_name"><?= $_SESSION['user']?></span>
             <?php
-            }elseif(isset($_SESSION['status']) && $_SESSION['status'] == 'editor'){ ?>
-                <span class="admin_name">Modo</span>
-            <?php
-            }
+            } 
             ?>
         </div>
         </nav>

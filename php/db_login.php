@@ -45,6 +45,8 @@
 // ############################## Herder Location ############################
 
                             header('Location:../admin.php');
+                        }elseif(isset($_SESSION['status']) && ($_SESSION['status'] == 'visitor')){
+                            header('Location:../index.php');
                         }else header('Location:../login.php?login_err=Password');
                     }else header('Location:../login.php?login_err=Name');
             }else header('Location:../login.php?login_err=already');
